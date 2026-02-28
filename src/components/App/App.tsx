@@ -13,7 +13,7 @@ function App() {
     bad: 0,
   });
 
-  const handelVote = (type: VoteType) => {
+  const handleVote = (type: VoteType) => {
     setVotes((prev) => ({ ...prev, [type]: prev[type] + 1 }));
   };
 
@@ -35,7 +35,7 @@ function App() {
     <div className={css.app}>
       <CafeInfo />
       <VoteOptions
-        onVote={handelVote}
+        onVote={handleVote}
         onReset={resetVotes}
         canReset={totalVotes > 0}
       />
